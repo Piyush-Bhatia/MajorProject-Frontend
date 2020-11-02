@@ -1,0 +1,24 @@
+<br><br>
+&nbsp;&nbsp;&nbsp;<a routerLink="/"><font color="black"> Back</font></a>
+<h4 style="text-align: center;">Fill Your Credentials</h4>
+<div>
+    <form class="form-control needs-validated" novalidate>   
+    <label for= "name">Name</label>
+    <input required minlength="3" pattern="[Aa-Zz]{3,}" type="text"  id="name" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Enter Name Here"/>
+    <br>
+
+    <label for= "course">Course</label>
+    <input required pattern="[Aa-Zz]{3,}" type="text" id="course" [(ngModel)]="student.course" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Enter Course Here"/>
+    <br/>
+
+    <label for= "fee">Fee</label>
+    <input type="number" placeholder="Enter Course Fee Here"  id="fee" [(ngModel)]="student.fee" [ngModelOptions]="{standalone: true}" class="form-control" required/>
+    <br/>
+
+    <label for= "marks">Marks</label>
+    <input type="number" placeholder="Enter Marks Here" id="marks" [(ngModel)]="student.marks" [ngModelOptions]="{standalone: true}" class="form-control" required/>
+    <br/>
+
+    <button style=" text-align: center; margin-left: 48%; margin-bottom: 4%;" class="btn btn-success" (click)="saveStudent()">Save</button>
+    </form>
+</div>
